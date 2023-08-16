@@ -5,7 +5,7 @@ pipeline{
 
             agent{
                 docker {
-                    image 'maven:lastest'
+                    image 'maven'
                 }
             }
             step{
@@ -13,7 +13,7 @@ pipeline{
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
                     
                      sh 'mvn clean package sonar:sonar'
-                 }
+                    }
                 }
             }
         }
