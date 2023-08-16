@@ -1,8 +1,8 @@
 pipeline{
     
     agent any 
-
-     stages {
+    
+    stages {
         
         stage('Git Checkout'){
             
@@ -14,8 +14,6 @@ pipeline{
                 }
             }
         }
-    
-    stages {
         stage('UNIT testing'){
             
             steps{
