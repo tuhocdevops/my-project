@@ -1,6 +1,19 @@
 pipeline{
     
     agent any 
+
+     stages {
+        
+        stage('Git Checkout'){
+            
+            steps{
+                
+                script{
+                    
+                    git branch: 'main', url: 'https://github.com/tuhocdevops/my-project.git'
+                }
+            }
+        }
     
     stages {
         stage('UNIT testing'){
